@@ -31,21 +31,21 @@ export class NgxCopyToClipboardComponent implements OnDestroy, OnInit {
   @Input()
   action: 'copy' | 'cut';
 
-  isSupported = true;
-  className = '';
-
   @Input()
   ariaLabel: string = 'Click to copy';
+
+  isSupported = true;
+  className = '';
 
   private clipboard: { on: (eventName: string, cb: (e) => void) => void; destroy: any };
 
   constructor(private _el: ElementRef, private _zone: NgZone) {
-    this.className = `ngx-copy-to-clipboard-${this.action}-${Date.now()}`;
     this.handleSuccess = this.handleSuccess.bind(this);
     this.handleError = this.handleError.bind(this);
   }
 
   ngOnInit() {
+    this.className = `ngx-copy-to-clipboard-${this.action}-${Date.now()}`;
     this.isSupported = ClipboardJS.isSupported();
 
     if (this.isSupported) {

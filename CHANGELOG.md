@@ -15,3 +15,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
 
 - Updated docs for component
+- Updated tests to check added class in component
