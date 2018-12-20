@@ -1,27 +1,137 @@
-# NgxCopyToClipboardDemo
+# NGX Copy to clipboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
+[![Dependency Status](https://david-dm.org/willmendesneto/ngx-copy-to-clipboard.svg)](https://david-dm.org/willmendesneto/ngx-copy-to-clipboard)
+[![npm](https://img.shields.io/badge/stackblitz-online-orange.svg)](https://stackblitz.com/edit/ngx-copy-to-clipboard-sample)
 
-## Development server
+[![NPM](https://nodei.co/npm/ngx-copy-to-clipboard.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/ngx-copy-to-clipboard)
+[![NPM](https://nodei.co/npm-dl/ngx-copy-to-clipboard.png?height=3&months=3)](https://npmjs.org/ngx-copy-to-clipboard)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[![Build Status](https://circleci.com/gh/willmendesneto/ngx-copy-to-clipboard.svg?style=shield)](https://circleci.com/gh/willmendesneto/ngx-copy-to-clipboard)
+[![Coverage Status](https://coveralls.io/repos/willmendesneto/ngx-copy-to-clipboard/badge.svg?branch=master)](https://coveralls.io/r/willmendesneto/ngx-copy-to-clipboard?branch=master)
+[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/ngx-copy-to-clipboard.svg)](https://bundlephobia.com/result?p=ngx-copy-to-clipboard)
+[![npm](https://img.shields.io/npm/l/express.svg?maxAge=2592000)](/LICENSE)
 
-## Code scaffolding
+Your module to handle with [feature toggles]() in Angular applications easier.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Why Copy to clipboard?
 
-## Build
+> This is a common concept, but why use this directive instead solve it via server-side rendering?
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The idea of this directive is make this process transparent and easier. So the main point is integrate this directive with other tooling process, such as:
 
-## Running unit tests
+- Server-side rendering;
+- Progressive rendering;
+- Any other that you like :)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+You can integrate with WebSockets or handling this in a EventSourcing architecture. It's totally transparent for you and you can integrate easier in your application.
 
-## Running end-to-end tests
+- [Demo](#demo)
+- [Install](#install)
+- [Setup](#setup)
+- [Development](#development)
+- [Contribute](#contribute)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Demo
 
-## Further help
+Try out our [demo on Stackblitz](https://ngx-copy-to-clipboard-sample.stackblitz.io)!
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Install
+
+You can get it on NPM installing `ngx-copy-to-clipboard` module as a project dependency.
+
+```shell
+npm install ngx-copy-to-clipboard --save
+```
+
+## Setup
+
+You'll need to add `NgxCopyToClipboardModule` to your application module. So that, the `<ngx-copy-to-clipboard>` components will be accessible in your application.
+
+```typescript
+@NgModule({
+  declarations: [
+    YourAppComponent
+  ],
+  imports: [
+    NgxCopyToClipboardModule,
+    ...
+  ],
+  providers: [],
+  bootstrap: [YourAppComponent]
+})
+
+export class YourAppComponent {}
+
+```
+
+Now you just need to add a configuration in your components and, after that, you can use the `ngx-copy-to-clipboard` component in your templates, passing the required attributes to make it work properly.
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'component-docs',
+  template: `
+    <section class="section">
+      <h2>Copying data from textarea element</h2>
+      <textarea name="text-content" id="text-content" rows="5" cols="33">
+Demonstration content...
+      </textarea
+      >
+      <ngx-copy-to-clipboard
+        target="#text-content"
+        [action]="cut"
+        [onSuccess]="onSuccess"
+        [onError]="onError"
+        >Copy</ngx-copy-to-clipboard
+      >
+    </section>
+  `,
+})
+export class ComponentDocsComponent {
+  copiedText = '';
+
+  constructor() {
+    this.onSuccess = this.onSuccess.bind(this);
+    this.onError = this.onError.bind(this);
+  }
+
+  onSuccess(e) {
+    this.copiedText = e.text;
+  }
+
+  onError(e) {
+    this.copiedText = 'Error trying to copy your text';
+  }
+}
+```
+
+> You should bind `onSuccess` and `onError` functions before passing through the component to make sure your component will be running based on the same scope.
+
+## Development
+
+### Run demo locally
+
+1. This project uses [Angular CLI](https://cli.angular.io/) as base. That means you just need to run `npm start` and access the link `http://localhost:4200` in your browser
+
+### Run tests
+
+1. Run `npm test` for run tests. In case you want to test using watch, please use `npm run tdd`
+
+### Publish
+
+this project is using `np` package to publish, which makes things straightforward. EX: `np <patch|minor|major> --contents=dist/ngx-copy-to-clipboard`
+
+> For more details, [please check np package on npmjs.com](https://www.npmjs.com/package/np)
+
+## Contribute
+
+For any type of contribution, please follow the instructions in [CONTRIBUTING.md](https://github.com/willmendesneto/ngx-copy-to-clipboard/blob/master/CONTRIBUTING.md) and read [CODE_OF_CONDUCT.md](https://github.com/willmendesneto/ngx-copy-to-clipboard/blob/master/CODE_OF_CONDUCT.md) files.
+
+## Author
+
+**Wilson Mendes (willmendesneto)**
+
+- <https://plus.google.com/+WilsonMendes>
+- <https://twitter.com/willmendesneto>
+- <http://github.com/willmendesneto>

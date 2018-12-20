@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-copy-to-clipboard": [
+        "dist/ngx-copy-to-clipboard"
+      ],
+      "ngx-copy-to-clipboard/*": [
+        "dist/ngx-copy-to-clipboard/*"
+      ]
+    }
   }
 }

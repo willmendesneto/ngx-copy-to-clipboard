@@ -9,6 +9,6 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to ngx-copy-to-clipboard-demo!');
+    expect(page.getTitleText()).toEqual('ngx-copy-to-clipboard');
   });
 });

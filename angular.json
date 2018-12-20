@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "ngx-copy-to-clipboard": {
+      "root": "projects/ngx-copy-to-clipboard",
+      "sourceRoot": "projects/ngx-copy-to-clipboard/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-copy-to-clipboard/tsconfig.lib.json",
+            "project": "projects/ngx-copy-to-clipboard/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-copy-to-clipboard/src/test.ts",
+            "tsConfig": "projects/ngx-copy-to-clipboard/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-copy-to-clipboard/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-copy-to-clipboard/tsconfig.lib.json",
+              "projects/ngx-copy-to-clipboard/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-copy-to-clipboard-demo"

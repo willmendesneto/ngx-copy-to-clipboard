@@ -1,20 +1,73 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<h1>ngx-copy-to-clipboard</h1>
 
+<p>
+  Copied text is: <b>{{ copiedText }}</b>
+</p>
+
+<section class="section">
+  <h2>Copying data from textarea element</h2>
+  <textarea name="text-content" id="text-content" rows="5" cols="33">
+Demonstration content...</textarea
+  >
+  <hr />
+  <code>{{ copiedText || 'Your text will be pasted here...' }}</code>
+  <hr />
+  <ngx-copy-to-clipboard
+    target="#text-content"
+    [action]="cut"
+    [success]="onSuccess"
+    [error]="onError"
+    >Copy</ngx-copy-to-clipboard
+  >
+</section>
+
+<section class="section">
+  <h2>Copying data from input element</h2>
+  <input type="text" name="text" id="text" value="Demonstration content..." />
+  <hr />
+  <code>{{ copiedText || 'Your text will be pasted here...' }}</code>
+  <hr />
+  <ngx-copy-to-clipboard target="#text" [action]="cut" [success]="onSuccess" [error]="onError"
+    >Copy</ngx-copy-to-clipboard
+  >
+</section>
+
+<section class="section">
+  <h2>Copying data from a HTML element</h2>
+  <div id="html-content">
+    <h3>This should be copied</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero porro dicta quae et suscipit
+      pariatur, non quam nihil labore laboriosam, quos minima excepturi id voluptatum, atque saepe
+      quidem nesciunt quas.
+    </p>
+  </div>
+  <hr />
+  <code>{{ copiedText || 'Your text will be pasted here...' }}</code>
+  <hr />
+  <ngx-copy-to-clipboard
+    target="#html-content"
+    [action]="cut"
+    [success]="onSuccess"
+    [error]="onError"
+    >Copy</ngx-copy-to-clipboard
+  >
+</section>
+
+<section class="section">
+  <h2>Copying data from textarea element</h2>
+  <textarea name="second-text-content" id="second-text-content" rows="5" cols="33">
+Demonstration content...</textarea
+  >
+  <hr />
+  <code>{{ copiedText || 'Your text will be pasted here...' }}</code>
+  <hr />
+  <ngx-copy-to-clipboard
+    target="#second-text-content"
+    [action]="cut"
+    [success]="onSuccess"
+    [error]="onError"
+  >
+    <img src="/assets/clippy.svg" alt="Copy content" width="20" />
+  </ngx-copy-to-clipboard>
+</section>
