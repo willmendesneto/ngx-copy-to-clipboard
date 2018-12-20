@@ -81,8 +81,8 @@ Demonstration content...
       <ngx-copy-to-clipboard
         target="#text-content"
         [action]="cut"
-        [onSuccess]="onSuccess"
-        [onError]="onError"
+        [success]="onSuccess"
+        [error]="onError"
         >Copy</ngx-copy-to-clipboard
       >
     </section>
@@ -106,7 +106,7 @@ export class ComponentDocsComponent {
 }
 ```
 
-> You should bind `onSuccess` and `onError` functions before passing through the component to make sure your component will be running based on the same scope.
+> You should bind the `success` and `error` function callbacks before passing through the component to make sure your component will be running based on the same scope.
 
 ## Development
 
