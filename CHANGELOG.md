@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Updated
+
+- Updating to latest dependencies
+
 ## [1.0.0][] - 2018-12-21
 
 ### Added
@@ -23,6 +27,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fixing tests for copy to clipboard component
 
-
-[Unreleased]: https://github.com/willmendesneto/ngx-copy-to-clipboard/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/willmendesneto/ngx-copy-to-clipboard/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/willmendesneto/ngx-copy-to-clipboard/tree/v1.0.0
