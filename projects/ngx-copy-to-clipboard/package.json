@@ -20,7 +20,7 @@
     "url": "https://github.com/willmendesneto/ngx-copy-to-clipboard/issues"
   },
   "homepage": "https://github.com/willmendesneto/ngx-copy-to-clipboard#readme",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "peerDependencies": {
     "@angular/common": "^7.1.0",
     "@angular/core": "^7.1.0"
