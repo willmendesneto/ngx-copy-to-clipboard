@@ -1,6 +1,6 @@
 {
   "name": "ngx-copy-to-clipboard-demo",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Your module to copy content to clipboard in Angular applications easier",
   "author": "Will Mendes <willmendesneto@gmail.com>",
   "license": "MIT",
