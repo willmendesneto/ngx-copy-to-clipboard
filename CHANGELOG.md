@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Added
+
+- Added coveralls integration
+
 ## [2.0.0][] - 2018-12-21
 
 ### Updated
@@ -31,7 +35,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [unreleased]: https://github.com/willmendesneto/ngx-copy-to-clipboard/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/willmendesneto/ngx-copy-to-clipboard/tree/v1.0.0
-
-
-[Unreleased]: https://github.com/willmendesneto/ngx-copy-to-clipboard/compare/v2.0.0...HEAD
+[unreleased]: https://github.com/willmendesneto/ngx-copy-to-clipboard/compare/v2.0.0...HEAD
 [2.0.0]: https://github.com/willmendesneto/ngx-copy-to-clipboard/tree/v2.0.0
