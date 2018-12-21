@@ -11,7 +11,7 @@
 [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/ngx-copy-to-clipboard.svg)](https://bundlephobia.com/result?p=ngx-copy-to-clipboard)
 [![npm](https://img.shields.io/npm/l/express.svg?maxAge=2592000)](/LICENSE)
 
-Your module to handle with [feature toggles]() in Angular applications easier.
+Your module to copy content to clipboard in Angular applications easier 🎯.
 
 ## Why Copy to clipboard?
 

@@ -1,6 +1,26 @@
 {
   "name": "ngx-copy-to-clipboard",
-  "version": "0.0.1",
+  "description": "Your module to copy content to clipboard in Angular applications easier",
+  "author": "Will Mendes <willmendesneto@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "ngx",
+    "copy",
+    "text",
+    "content",
+    "clipboard",
+    "ngx-copy-to-clipboard"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willmendesneto/ngx-copy-to-clipboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/willmendesneto/ngx-copy-to-clipboard/issues"
+  },
+  "homepage": "https://github.com/willmendesneto/ngx-copy-to-clipboard#readme",
+  "version": "0.0.0",
   "peerDependencies": {
     "@angular/common": "^7.1.0",
     "@angular/core": "^7.1.0"

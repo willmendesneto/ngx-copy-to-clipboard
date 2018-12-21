@@ -45,7 +45,6 @@ describe('NgxCopyToClipboardComponent', () => {
 
   beforeEach(async(() => {
     spyOn(Date, 'now').and.returnValue(1545343685559);
-    spyOn(ClipboardJS, 'isSupported').and.returnValue(false);
     fixture = TestBed.configureTestingModule({
       declarations: [ContainerComponent, NgxCopyToClipboardComponent],
       schemas: [NO_ERRORS_SCHEMA],

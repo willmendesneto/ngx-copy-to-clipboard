@@ -16,3 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Updated docs for component
 - Updated tests to check added class in component
+
+### Fixed
+
+- Fixing tests for copy to clipboard component
