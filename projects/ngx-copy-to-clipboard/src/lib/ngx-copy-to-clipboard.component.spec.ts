@@ -40,7 +40,6 @@ class ContainerComponent {
 }
 
 describe('NgxCopyToClipboardComponent', () => {
-  let component: NgxCopyToClipboardComponent;
   let fixture: any;
 
   beforeEach(async(() => {

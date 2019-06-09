@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Updated
+
+- Updating Angular CLI to v8
+
 ### Added
 
 - Added coveralls integration
