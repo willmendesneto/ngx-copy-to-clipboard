@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [2.0.1][] - 2019-06-09
+
 ### Updated
 
 - Updating Angular CLI to v8
@@ -41,3 +43,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [1.0.0]: https://github.com/willmendesneto/ngx-copy-to-clipboard/tree/v1.0.0
 [unreleased]: https://github.com/willmendesneto/ngx-copy-to-clipboard/compare/v2.0.0...HEAD
 [2.0.0]: https://github.com/willmendesneto/ngx-copy-to-clipboard/tree/v2.0.0
+
+
+[Unreleased]: https://github.com/willmendesneto/ngx-copy-to-clipboard/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/willmendesneto/ngx-copy-to-clipboard/tree/v2.0.1
