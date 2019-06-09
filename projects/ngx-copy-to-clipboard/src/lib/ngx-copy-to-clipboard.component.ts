@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Input, ElementRef, NgZone } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, ElementRef } from '@angular/core';
 import ClipboardJS from 'clipboard';
 
 const defaultHandler = e => e;
@@ -26,20 +26,21 @@ export class NgxCopyToClipboardComponent implements OnDestroy, OnInit {
   error: (e) => void = defaultHandler;
 
   @Input()
-  target: string = '';
+  target = '';
 
   @Input()
   action: 'copy' | 'cut';
 
   @Input()
-  ariaLabel: string = 'Click to copy';
+  ariaLabel = 'Click to copy';
 
   isSupported = true;
   className = '';
 
   private clipboard: { on: (eventName: string, cb: (e) => void) => void; destroy: any };
 
-  constructor(private _el: ElementRef, private _zone: NgZone) {
+  // tslint:disable-next-line: variable-name
+  constructor(private _el: ElementRef) {
     this.handleSuccess = this.handleSuccess.bind(this);
     this.handleError = this.handleError.bind(this);
   }
@@ -71,6 +72,8 @@ export class NgxCopyToClipboardComponent implements OnDestroy, OnInit {
   }
 
   ngOnDestroy() {
-    this.clipboard && this.clipboard.destroy();
+    if (!!this.clipboard) {
+      this.clipboard.destroy();
+    }
   }
 }
