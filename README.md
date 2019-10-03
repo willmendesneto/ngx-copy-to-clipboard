@@ -48,11 +48,15 @@ npm install ngx-copy-to-clipboard --save
 You'll need to add `NgxCopyToClipboardModule` to your application module. So that, the `<ngx-copy-to-clipboard>` components will be accessible in your application.
 
 ```typescript
+...
+import { NgxCopyToClipboardModule } from 'ngx-copy-to-clipboard';
+...
 @NgModule({
   declarations: [
     YourAppComponent
   ],
   imports: [
+    ...
     NgxCopyToClipboardModule,
     ...
   ],
