@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [2.0.2][] - 2020-02-26
+
 ### Updated
 
 - Updating to NodeJS v12.14.1
@@ -53,3 +55,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [2.0.0]: https://github.com/willmendesneto/ngx-copy-to-clipboard/tree/v2.0.0
 [unreleased]: https://github.com/willmendesneto/ngx-copy-to-clipboard/compare/v2.0.1...HEAD
 [2.0.1]: https://github.com/willmendesneto/ngx-copy-to-clipboard/tree/v2.0.1
+
+
+[Unreleased]: https://github.com/willmendesneto/ngx-copy-to-clipboard/compare/v2.0.2...HEAD
+[2.0.2]: https://github.com/willmendesneto/ngx-copy-to-clipboard/tree/v2.0.2
