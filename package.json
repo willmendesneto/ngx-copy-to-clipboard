@@ -83,7 +83,7 @@
   "bundlesize": [
     {
       "path": "./dist/ngx-copy-to-clipboard/bundles/ngx-copy-to-clipboard.umd.min.js",
-      "maxSize": "994B"
+      "maxSize": "1.05KB"
     }
   ]
 }

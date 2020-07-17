@@ -1,6 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async as asyncMock, TestBed } from '@angular/core/testing';
 import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
-import ClipboardJS from 'clipboard';
 
 import { NgxCopyToClipboardComponent } from './ngx-copy-to-clipboard.component';
 
@@ -42,18 +41,22 @@ class ContainerComponent {
 describe('NgxCopyToClipboardComponent', () => {
   let fixture: any;
 
-  beforeEach(async(() => {
-    spyOn(Date, 'now').and.returnValue(1545343685559);
-    fixture = TestBed.configureTestingModule({
-      declarations: [ContainerComponent, NgxCopyToClipboardComponent],
-      schemas: [NO_ERRORS_SCHEMA],
-    }).createComponent(ContainerComponent);
-    fixture.detectChanges();
-  }));
+  beforeEach(
+    asyncMock(() => {
+      spyOn(Date, 'now').and.returnValue(1545343685559);
+      fixture = TestBed.configureTestingModule({
+        declarations: [ContainerComponent, NgxCopyToClipboardComponent],
+        schemas: [NO_ERRORS_SCHEMA],
+      }).createComponent(ContainerComponent);
+      fixture.detectChanges();
+    })
+  );
 
   it('should add styles based on circle class on the skeleton components', () => {
     expect(
-      fixture.nativeElement.querySelectorAll('.ngx-copy-to-clipboard-copy-1545343685559').length,
+      fixture.nativeElement.querySelectorAll(
+        '.ngx-copy-to-clipboard-copy-1545343685559'
+      ).length
     ).toBe(1);
   });
 });

@@ -1,7 +1,14 @@
-import { Component, OnInit, OnDestroy, Input, ElementRef } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  Input,
+  ElementRef,
+  isDevMode,
+} from '@angular/core';
 import ClipboardJS from 'clipboard';
 
-const defaultHandler = e => e;
+const defaultHandler = (e) => e;
 
 @Component({
   selector: 'ngx-copy-to-clipboard',
@@ -37,7 +44,10 @@ export class NgxCopyToClipboardComponent implements OnDestroy, OnInit {
   isSupported = true;
   className = '';
 
-  private clipboard: { on: (eventName: string, cb: (e) => void) => void; destroy: any };
+  private clipboard: {
+    on: (eventName: string, cb: (e) => void) => void;
+    destroy: any;
+  };
 
   // tslint:disable-next-line: variable-name
   constructor(private _el: ElementRef) {
@@ -53,8 +63,21 @@ export class NgxCopyToClipboardComponent implements OnDestroy, OnInit {
       const currentElement = this._el.nativeElement;
 
       const options = {
-        ...(this.target ? { target: () => document.querySelector(this.target) } : {}),
+        ...(this.target
+          ? {
+              target: () => {
+                const element = document.querySelector(this.target);
+                if (!element && isDevMode()) {
+                  console.log(
+                    `\`NgxCopyToClipboardComponent\` target "${this.target}" is not available in the DOM`
+                  );
+                }
+                return element;
+              },
+            }
+          : {}),
       };
+
       this.clipboard = new ClipboardJS(currentElement, options);
       this.clipboard.on('success', this.handleSuccess);
       this.clipboard.on('error', this.handleError);
