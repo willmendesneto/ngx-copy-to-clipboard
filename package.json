@@ -49,7 +49,7 @@
     "@angular/router": "~8.2.14",
     "clipboard": "^2.0.4",
     "rxjs": "~6.6.3",
-    "tslib": "^1.14.0",
+    "tslib": "^1.14.1",
     "zone.js": "~0.11.1"
   },
   "devDependencies": {
