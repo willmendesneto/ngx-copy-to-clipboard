@@ -50,7 +50,7 @@
     "clipboard": "^2.0.4",
     "rxjs": "~6.6.3",
     "tslib": "^1.14.0",
-    "zone.js": "~0.11.1"
+    "zone.js": "~0.11.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.800.0",
