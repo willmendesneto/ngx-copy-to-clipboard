@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [2.2.0][] - 2020-12-09
+
 ### Added
 
 - Adding prettierrc configuration
@@ -80,3 +82,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [2.0.2]: https://github.com/willmendesneto/ngx-copy-to-clipboard/tree/v2.0.2
 [unreleased]: https://github.com/willmendesneto/ngx-copy-to-clipboard/compare/v2.1.0...HEAD
 [2.1.0]: https://github.com/willmendesneto/ngx-copy-to-clipboard/tree/v2.1.0
+
+
+[Unreleased]: https://github.com/willmendesneto/ngx-copy-to-clipboard/compare/v2.2.0...HEAD
+[2.2.0]: https://github.com/willmendesneto/ngx-copy-to-clipboard/tree/v2.2.0
