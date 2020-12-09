@@ -7,9 +7,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Added
+
+- Adding prettierrc configuration
+
 ### Updated
 
 - Updating project to use @angular v9 packages
+
+### Fixed
+
+- Fixing issue with ivy in Angular v10. Closes https://github.com/willmendesneto/ngx-copy-to-clipboard/issues/28
+- Adding postinstall script command
+- Fixing test coverage lcov file
+- Updating dev dependencies
 
 ## [2.1.0][] - 2020-07-17
 
