@@ -50,7 +50,7 @@
     "@angular/router": "~10.2.5",
     "clipboard": "^2.0.4",
     "rxjs": "~6.6.7",
-    "tslib": "^2.1.0",
+    "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
